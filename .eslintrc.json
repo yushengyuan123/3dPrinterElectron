@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/electron",
+    "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    // 不适用分号
+    "semi": ["error", "never"],
+
+    // 四缩进
+    "indent": ["error", 4],
+
+    // 函数调用时 函数名与()之间不能有空格
+    "no-spaced-func": "error",
+
+    // 使用单引号
+    "quotes": ["error", "single"],
+
+    // 禁止无用的表达式
+    "no-unused-expressions": "error",
+
+    // 函数定义时括号前面要不要有空格
+    "space-before-function-paren": ["error", "never"],
+
+    // 函数不一定需要定义返回类型
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}
